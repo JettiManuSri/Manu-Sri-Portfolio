@@ -1,270 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manu Sri's Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manu Sri Jetti</title>
 
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-            padding-top: 60px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+body{
+    background:#f6f8fa;
+    color:#1f2937;
+    line-height:1.65;
+    padding-top:90px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+/* HEADER */
+header{
+    background:#0f172a;
+    color:#fff;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 0;
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
+header h1{
+    font-size:2.2rem;
+    letter-spacing:1px;
+}
 
-        nav ul li {
-            display: inline-block;
-            margin: 0 20px;
-        }
+nav ul{
+    list-style:none;
+    margin-top:8px;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+nav ul li{
+    display:inline-block;
+    margin:0 14px;
+}
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+nav ul li a{
+    color:#cbd5f5;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.95rem;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+nav ul li a:hover{
+    color:#60a5fa;
+}
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* HERO */
+.hero{
+    text-align:center;
+    margin:110px 20px 60px;
+}
 
-        p, li {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
+.hero h2{
+    font-size:2.6rem;
+}
 
-        ul li {
-            list-style: none;
-            margin-bottom: 20px;
-        }
+.hero p{
+    font-size:1.15rem;
+    color:#4b5563;
+    margin-top:8px;
+}
 
-        ul li h3 {
-            color: #444;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
+.badge{
+    margin-top:14px;
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:6px 18px;
+    border-radius:20px;
+    font-size:0.95rem;
+}
 
-        .skills, .education, .experience {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+/* SECTIONS */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 20px;
+}
 
-        .skills li, .education li, .experience li {
-            width: 48%;
-            margin-bottom: 10px;
-        }
+.section-title{
+    font-size:1.8rem;
+    border-left:6px solid #2563eb;
+    padding-left:14px;
+    margin-bottom:30px;
+}
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+/* GRID / CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
 
-        a {
-            color: #1E90FF;
-            text-decoration: none;
-        }
+.card{
+    background:white;
+    padding:26px;
+    border-radius:12px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.card h4{
+    font-size:1.25rem;
+    margin-bottom:8px;
+}
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+.card p{
+    font-size:1.02rem;
+    color:#374151;
+}
 
-        /* Section background colors */
-        section:nth-of-type(odd) {
-            background-color: #e9ecef;
-        }
+.meta{
+    font-size:0.95rem;
+    color:#2563eb;
+    margin-top:10px;
+    font-weight:600;
+}
 
-        section:nth-of-type(even) {
-            background-color: #f8f9fa;
-        }
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    background:#e0e7ff;
+    color:#1e3a8a;
+    padding:8px 14px;
+    margin:6px;
+    border-radius:18px;
+    font-weight:600;
+    font-size:0.9rem;
+}
 
-        /* Hover effects */
-        section:hover {
-            background-color: #e2e6ea;
-            transition: background-color 0.3s ease;
-        }
+/* LINKS */
+.links a{
+    display:block;
+    color:#2563eb;
+    margin-bottom:10px;
+    font-weight:600;
+    text-decoration:none;
+}
 
-        .intro {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            margin-top: 100px;
-            transition: opacity 1s ease;
-        }
+.links a:hover{
+    text-decoration:underline;
+}
 
-        .status {
-            font-size: 1.3rem;
-            color: #555;
-            font-weight: normal;
-            transition: opacity 1s ease;
-        }
-    </style>
+/* FOOTER */
+footer{
+    background:#0f172a;
+    color:#cbd5f5;
+    text-align:center;
+    padding:20px;
+}
+
+footer a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Manu Sri's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Dynamic Intro Section -->
-    <div class="intro">
-        <p>Hello, I am Manu Sri</p>
-        <p class="status" id="status">Tech Enthusiast</p>
+<header>
+    <h1>Manu Sri Jetti</h1>
+    <nav>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#links">Profiles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Tech Enthusiast</h2>
+    <p>3rd Year B.Tech Computer Science Student · GNITS, Hyderabad</p>
+</div>
+
+<section id="summary">
+    <h3 class="section-title">Summary</h3>
+    <p>
+        Highly motivated third-year B.Tech Computer Science student with a solid foundation in
+        <strong>Data Structures, Algorithms, and Software Development</strong>.
+        Proficient in Python, Java, and C with strong problem-solving skills demonstrated through
+        hackathons and competitive programming. Eager to contribute to innovative software engineering
+        projects and apply technical expertise in real-world applications.
+    </p>
+</section>
+
+<section id="education">
+    <h3 class="section-title">Education</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>B.Tech in Computer Science Engineering</h4>
+            <p>G. Narayanamma Institute of Technology and Science, Hyderabad</p>
+            <p><strong>CGPA:</strong> 9.01 (2023 - 2027)</p>
+        </div>
+        <div class="card">
+            <h4>Intermediate (MPC)</h4>
+            <p>Alphores Junior College, Hanamkonda</p>
+            <p><strong>Percentage:</strong> 98.5 (2021 - 2023)</p>
+        </div>
+        <div class="card">
+            <h4>SSC</h4>
+            <p>Aryabhatta Group of Schools, Hanamkonda</p>
+            <p><strong>Grade:</strong> 10 GPA (2020 - 2021)</p>
+        </div>
     </div>
+</section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate and driven second-year B.Tech Computer Science student with a strong foundation in Python, AI, and web development. I am enthusiastic about building real-world applications that solve pressing issues, especially in the fields of AI, environment, and productivity. I’m a team player with excellent communication skills and a strong interest in learning and applying advanced technologies.</p>
-    </section>
+<section id="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Satellite Image Processing for Water Body Detection</h4>
+            <p>
+                Implemented image preprocessing and segmentation techniques using satellite imagery.
+                Utilized deep learning (U-Net) for accurate water body detection and dataset preparation
+                for environmental monitoring and flood analysis.
+            </p>
+            <div class="meta">Python · Deep Learning · Image Processing · GIS</div>
+        </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>SATELLITE IMAGE PRE-PROCESSING ON WATER BODIES</h3>
-                <p>This project aims to develop a tool that divides real-time satellite images into sub-images, applies precise masking to detect water bodies, and generates a preprocessed dataset suitable for training machine learning models.</p>
-            </li>
-            <li>
-                <h3>Goal-Oriented To-Do App</h3>
-                <p>Building a mobile app to manage tasks, with features like AI assistance, notifications, and task assignment.</p>
-            </li>
-        </ul>
-    </section>
+        <div class="card">
+            <h4>Sudoku Solver using Backtracking</h4>
+            <p>
+                Developed a Sudoku solving system using recursive backtracking.
+                Ensured constraint validation across rows, columns, and sub-grids,
+                strengthening algorithmic thinking and logical problem-solving.
+            </p>
+            <div class="meta">Java · Recursion · Backtracking</div>
+        </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills">
-            <li><strong>Languages:</strong> C, C++, Java, Python</li>
-            <li><strong>Tools & Technologies:</strong> AI, Python, Web Development, Machine Learning, Google AI Studio, Claude AI, Node.js</li>
-        </ul>
-    </section>
+        <div class="card">
+            <h4>Diabetes Prediction System</h4>
+            <p>
+                Built a machine learning pipeline for diabetes prediction using medical datasets.
+                Performed data preprocessing, feature selection, model training, and evaluation.
+            </p>
+            <div class="meta">Python · Machine Learning · Scikit-learn · Data Analysis</div>
+        </div>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul class="education">
-            <li><strong>B.Tech - Computer Science</strong> (GNITS, 2023-2027) - CGPA: 9.10</li>
-            <li><strong>Intermediate (MPC)</strong> (Alphores Junior College, 2021-2023) - 98.5%</li>
-            <li><strong>High School</strong> (Aryabhatta Group of School, 2020-2021) - 10 GPA</li>
-        </ul>
-    </section>
+        <div class="card">
+            <h4>AI-Powered To-Do List Chatbot</h4>
+            <p>
+                Designed a To-Do List application with AI chatbot integration using Pickaxe.
+                Included task filters, reminders, and calendar-based task tracking for productivity.
+            </p>
+            <div class="meta">HTML · CSS · JavaScript · AI Integration</div>
+        </div>
+    </div>
+</section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul class="experience">
-            <li>
-                <h3>Team Lead – Chatbot Development Hackathon</h3>
-                <p>Led a team in a 3-day hackathon, where we developed a chatbot using Google AI Studio and Claude AI. The chatbot was designed to engage users, answer questions, and provide personalized recommendations. I had the honor of anchoring the valedictory session.</p>
-            </li>
-            <li>
-                <h3>Participant – Being Zero and DSA Fundamentals (08/2024)</h3>
-                <p>Mastered Data Structures and Algorithms, including Dynamic Programming and Graph Algorithms, which enhanced my problem-solving and coding skills.</p>
-            </li>
-            <li>
-                <h3>Participant – ML & Applications Workshop (08/2024)</h3>
-                <p>Gained foundational knowledge in Machine Learning applications, expanding my understanding of how to apply ML techniques to real-world problems.</p>
-            </li>
-        </ul>
-    </section>
+<section id="certifications">
+    <h3 class="section-title">Certifications & Participation</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>CISCO Networking Academy</h4>
+            <p>Completed Networking Basics covering IP addressing, routing, and troubleshooting.</p>
+        </div>
+        <div class="card">
+            <h4>IBM SkillsBuild – Cloud Computing</h4>
+            <p>Certified in cloud fundamentals including service models and infrastructure concepts.</p>
+        </div>
+        <div class="card">
+            <h4>Swetcha Summer AI Internship</h4>
+            <p>Worked on AI and LLM concepts; contributed Telugu voice samples for LLM training.</p>
+        </div>
+        <div class="card">
+            <h4>Springboard - Infosys AI Insights</h4>
+            <p>Gained insights about Artificial Intelligence, its types, and practical applications.</p>
+        </div>
+        <div class="card">
+            <h4>Great Learning - DBMS Concepts</h4>
+            <p>Explored DBMS concepts, gaining a strong understanding of data models, SQL, and database design principles.</p>
+        </div>
+        <div class="card">
+            <h4>Teenzclap Professional Development</h4>
+            <p>Certified with Excellence in teamwork, communication, and professional skills.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="achievements">
-        <h2>Participations and Achievements</h2>
-        <ul>
-            <li>Collaborated with a team to develop an AI chatbot using Google AI Studio and Claude AI.</li>
-            <li>Certificate of Excellence in Value Added and Personality Development Course by Teenzclap.</li>
-            <li>Certificate of Completion of AI, Python course offered by GreatLearning.</li>
-            <li>Certified on building AI Telugu Model conducted by Swecha.</li>
-        </ul>
-    </section>
+<section id="skills">
+    <h3 class="section-title">Skills</h3>
+    <div class="skills">
+        <span>Python</span><span>Java</span><span>C</span>
+        <span>Data Structures & Algorithms</span>
+        <span>Machine Learning</span>
+        <span>DBMS</span><span>SQL</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <span>React</span>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:manusrijetti30@gmail.com">manusrijetti30@gmail.com</a></p>
-    </section>
+<section id="leadership">
+    <h3 class="section-title">Leadership & Volunteering</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Team Lead - Chatbot Development Hackathon</h4>
+            <p>
+                Led a team in a 3-day hackathon to develop an AI chatbot using Google AI Studio and Claude AI.
+                Coordinated tasks, managed timelines, and presented the final product to judges.
+            </p>
+            <div class="meta">Leadership · Team Management · AI Integration</div>
+        </div>
+        <div class="card">
+            <h4>Coordinator - Artista Club, GNITS</h4>
+            <p>
+                Organized workshops, events, and exhibitions for the college art club.
+                Facilitated collaboration among students, promoting creative expression and leadership skills.
+            </p>
+            <div class="meta">Event Management · Leadership · Creativity</div>
+        </div>
+        <div class="card">
+            <h4>Teenzclap Professional Development</h4>
+            <p>Certified with Excellence in teamwork, communication, and professional skills.</p>
+            <div class="meta">Soft Skills · Leadership · Teamwork</div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Manu Sri. All rights reserved.</p>
-    </footer>
+<section id="links">
+    <h3 class="section-title">Coding Profiles</h3>
+    <div class="links">
+        <a href="https://leetcode.com/u/JettiManuSri/" target="_blank">LeetCode</a>
+        <a href="https://www.codechef.com/users/manu_2006" target="_blank">CodeChef</a>
+        <a href="https://www.hackerrank.com/profile/manusrijetti30" target="_blank">HackerRank</a>
+        <a href="https://www.linkedin.com/in/manu-sri-jetti-033686293/" target="_blank">LinkedIn</a>
+    </div>
+</section>
 
-    <script>
-        window.onscroll = function () {
-            const status = document.getElementById("status");
-            const scrollPosition = window.scrollY;
+<section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <p>Email: <a href="mailto:manusrijetti30@gmail.com">manusrijetti30@gmail.com</a></p>
+</section>
 
-            if (scrollPosition > 200 && scrollPosition < 500) {
-                status.textContent = "Student";
-            } else if (scrollPosition >= 500) {
-                status.textContent = "Web Developer";
-            } else {
-                status.textContent = "Tech Enthusiast";
-            }
-        }
-    </script>
 </body>
 </html>
