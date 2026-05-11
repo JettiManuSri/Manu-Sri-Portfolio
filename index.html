@@ -1,358 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manu Sri Jetti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manu Sri Jetti | Portfolio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI", Arial, sans-serif;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-body{
-    background:#f6f8fa;
-    color:#1f2937;
-    line-height:1.65;
-    padding-top:90px;
-}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
 
-/* HEADER */
-header{
-    background:#0f172a;
-    color:#fff;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    padding:18px 0;
-}
+    body{
+      background:#f4f7fb;
+      color:#222;
+    }
 
-header h1{
-    font-size:2.2rem;
-    letter-spacing:1px;
-}
+ 
 
-nav ul{
-    list-style:none;
-    margin-top:8px;
-}
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-nav ul li{
-    display:inline-block;
-    margin:0 14px;
-}
+    nav h2{
+      color:#0f172a;
+      font-size:28px;
+      letter-spacing:1px;
+    }
 
-nav ul li a{
-    color:#cbd5f5;
-    text-decoration:none;
-    font-weight:600;
-    font-size:0.95rem;
-}
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
 
-nav ul li a:hover{
-    color:#60a5fa;
-}
+    nav ul li a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+      transition:0.3s;
+    }
 
-/* HERO */
-.hero{
-    text-align:center;
-    margin:110px 20px 60px;
-}
+    nav ul li a:hover{
+      color:#2563eb;
+    }
 
-.hero h2{
-    font-size:2.6rem;
-}
+   
 
-.hero p{
-    font-size:1.15rem;
-    color:#4b5563;
-    margin-top:8px;
-}
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 8% 80px;
+      background:linear-gradient(to right,#0f172a,#1e293b);
+      color:white;
+    }
 
-.badge{
-    margin-top:14px;
-    display:inline-block;
-    background:#2563eb;
-    color:white;
-    padding:6px 18px;
-    border-radius:20px;
-    font-size:0.95rem;
-}
+    .hero-content{
+      max-width:700px;
+    }
 
-/* SECTIONS */
-section{
-    max-width:1100px;
-    margin:auto;
-    padding:55px 20px;
-}
+    .hero h1{
+      font-size:65px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
 
-.section-title{
-    font-size:1.8rem;
-    border-left:6px solid #2563eb;
-    padding-left:14px;
-    margin-bottom:30px;
-}
+    .hero h1 span{
+      color:#38bdf8;
+    }
 
-/* GRID / CARDS */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:24px;
-}
+    .hero p{
+      font-size:18px;
+      line-height:1.8;
+      color:#dbeafe;
+      margin-bottom:35px;
+    }
 
-.card{
-    background:white;
-    padding:26px;
-    border-radius:12px;
-    box-shadow:0 8px 22px rgba(0,0,0,0.08);
-}
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#38bdf8;
+      color:#0f172a;
+      text-decoration:none;
+      border-radius:40px;
+      font-weight:600;
+      transition:0.3s;
+    }
 
-.card h4{
-    font-size:1.25rem;
-    margin-bottom:8px;
-}
+    .btn:hover{
+      transform:translateY(-3px);
+      background:white;
+    }
 
-.card p{
-    font-size:1.02rem;
-    color:#374151;
-}
+  
 
-.meta{
-    font-size:0.95rem;
-    color:#2563eb;
-    margin-top:10px;
-    font-weight:600;
-}
+    section{
+      padding:90px 8%;
+    }
 
-/* SKILLS */
-.skills span{
-    display:inline-block;
-    background:#e0e7ff;
-    color:#1e3a8a;
-    padding:8px 14px;
-    margin:6px;
-    border-radius:18px;
-    font-weight:600;
-    font-size:0.9rem;
-}
+    .section-title{
+      font-size:38px;
+      margin-bottom:50px;
+      text-align:center;
+      color:#0f172a;
+      position:relative;
+    }
 
-/* LINKS */
-.links a{
-    display:block;
-    color:#2563eb;
-    margin-bottom:10px;
-    font-weight:600;
-    text-decoration:none;
-}
+    .section-title::after{
+      content:'';
+      width:80px;
+      height:4px;
+      background:#38bdf8;
+      position:absolute;
+      bottom:-10px;
+      left:50%;
+      transform:translateX(-50%);
+      border-radius:10px;
+    }
 
-.links a:hover{
-    text-decoration:underline;
-}
 
-/* FOOTER */
-footer{
-    background:#0f172a;
-    color:#cbd5f5;
-    text-align:center;
-    padding:20px;
-}
 
-footer a{
-    color:#60a5fa;
-    text-decoration:none;
-}
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
-</style>
+    .about-card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .about-card h3{
+      margin-bottom:20px;
+      color:#2563eb;
+      font-size:26px;
+    }
+
+    .about-card p{
+      line-height:1.9;
+      color:#444;
+    }
+
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-box{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .skill-box:hover{
+      transform:translateY(-8px);
+    }
+
+    .skill-box h3{
+      margin-bottom:15px;
+      color:#2563eb;
+    }
+
+    .skill-box p{
+      color:#555;
+      line-height:1.8;
+    }
+
+   
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .project-content{
+      padding:28px;
+    }
+
+    .project-content h3{
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .project-content p{
+      color:#555;
+      line-height:1.8;
+      margin-bottom:15px;
+    }
+
+    .tech{
+      color:#2563eb;
+      font-weight:600;
+      font-size:14px;
+    }
+
+   
+
+    .timeline{
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:4px;
+      background:#38bdf8;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-2px;
+    }
+
+    .container{
+      padding:20px 40px;
+      position:relative;
+      width:50%;
+    }
+
+    .container.left{
+      left:0;
+    }
+
+    .container.right{
+      left:50%;
+    }
+
+    .content{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .content h3{
+      color:#2563eb;
+      margin-bottom:10px;
+    }
+
+   
+
+    .contact{
+      text-align:center;
+      background:#0f172a;
+      color:white;
+      border-radius:30px 30px 0 0;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .contact a{
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+  
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:45px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .timeline::after{
+        left:20px;
+      }
+
+      .container{
+        width:100%;
+        padding-left:60px;
+        padding-right:20px;
+      }
+
+      .container.right{
+        left:0;
+      }
+    }
+
+    @media(max-width:700px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Manu Sri Jetti</h1>
-    <nav>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#links">Profiles</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<div class="hero">
-    <h2>Tech Enthusiast</h2>
-    <p>3rd Year B.Tech Computer Science Student · GNITS, Hyderabad</p>
-</div>
 
-<section id="summary">
-    <h3 class="section-title">Summary</h3>
-    <p>
-        Highly motivated third-year B.Tech Computer Science student with a solid foundation in
-        <strong>Data Structures, Algorithms, and Software Development</strong>.
-        Proficient in Python, Java, and C with strong problem-solving skills demonstrated through
-        hackathons and competitive programming. Eager to contribute to innovative software engineering
-        projects and apply technical expertise in real-world applications.
-    </p>
-</section>
+  <nav>
+    <h2>Portfolio</h2>
 
-<section id="education">
-    <h3 class="section-title">Education</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>B.Tech in Computer Science Engineering</h4>
-            <p>G. Narayanamma Institute of Technology and Science, Hyderabad</p>
-            <p><strong>CGPA:</strong> 9.01 (2023 - 2027)</p>
-        </div>
-        <div class="card">
-            <h4>Intermediate (MPC)</h4>
-            <p>Alphores Junior College, Hanamkonda</p>
-            <p><strong>Percentage:</strong> 98.5 (2021 - 2023)</p>
-        </div>
-        <div class="card">
-            <h4>SSC</h4>
-            <p>Aryabhatta Group of Schools, Hanamkonda</p>
-            <p><strong>Grade:</strong> 10 GPA (2020 - 2021)</p>
-        </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Hi, I'm <span>Manu Sri Jetti</span>
+      </h1>
+
+      <p>
+        <p>
+  Motivated Computer Science Engineering student passionate about
+  Artificial Intelligence, Software Development, and building
+  innovative real-world solutions through continuous learning and hands-on projects.
+</p>
+      </p>
+
+      <a href="#projects" class="btn">View My Work</a>
+
     </div>
-</section>
 
-<section id="projects">
-    <h3 class="section-title">Projects</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Satellite Image Processing for Water Body Detection</h4>
-            <p>
-                Implemented image preprocessing and segmentation techniques using satellite imagery.
-                Utilized deep learning (U-Net) for accurate water body detection and dataset preparation
-                for environmental monitoring and flood analysis.
-            </p>
-            <div class="meta">Python · Deep Learning · Image Processing · GIS</div>
-        </div>
+  </section>
 
-        <div class="card">
-            <h4>Sudoku Solver using Backtracking</h4>
-            <p>
-                Developed a Sudoku solving system using recursive backtracking.
-                Ensured constraint validation across rows, columns, and sub-grids,
-                strengthening algorithmic thinking and logical problem-solving.
-            </p>
-            <div class="meta">Java · Recursion · Backtracking</div>
-        </div>
 
-        <div class="card">
-            <h4>Diabetes Prediction System</h4>
-            <p>
-                Built a machine learning pipeline for diabetes prediction using medical datasets.
-                Performed data preprocessing, feature selection, model training, and evaluation.
-            </p>
-            <div class="meta">Python · Machine Learning · Scikit-learn · Data Analysis</div>
-        </div>
+  <section id="about">
 
-        <div class="card">
-            <h4>AI-Powered To-Do List Chatbot</h4>
-            <p>
-                Designed a To-Do List application with AI chatbot integration using Pickaxe.
-                Included task filters, reminders, and calendar-based task tracking for productivity.
-            </p>
-            <div class="meta">HTML · CSS · JavaScript · AI Integration</div>
-        </div>
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <div class="about-card">
+
+        <h3>Who Am I?</h3>
+
+        <p>
+          I am a Computer Science undergraduate at G. Narayanamma Institute of
+          Technology and Science, Hyderabad. I enjoy building intelligent solutions,
+          exploring AI technologies, and solving real-world problems through software.
+          I am continuously improving my skills in Data Structures, Machine Learning,
+          Web Development, and Cloud technologies.
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <h3>Education</h3>
+
+        <p>
+          <strong>B.Tech in Computer Science Engineering</strong><br>
+          G. Narayanamma Institute of Technology and Science<br><br>
+
+          CGPA: 8.99<br><br>
+
+          Intermediate (MPC) — Alphores Junior College<br>
+          Percentage: 98.5%
+        </p>
+
+      </div>
+
     </div>
-</section>
+
+  </section>
+
+
+
+  <section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill-box">
+        <h3>Programming</h3>
+        <p>Java, Python, C</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Databases</h3>
+        <p>SQL, DBMS</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>AI & ML</h3>
+        <p>Machine Learning, TensorFlow, OpenCV, Image Processing</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Technologies</h3>
+        <p>Agile Methodologies, Cloud Computing</p>
+      </div>
+
+
+      <div class="skill-box">
+        <h3>Core CS</h3>
+        <p>Data Structures, Algorithms, OOPs, Computer Networks,Operating Systems</p>
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <h3>Satellite Image Processing for Water Body Detection</h3>
+
+          <p>
+            Developed an AI-powered image processing pipeline using semantic masking
+            and deep learning to identify water bodies from satellite imagery.
+            Built a Streamlit-based visualization system for automated dataset preparation.
+          </p>
+
+          <div class="tech">
+            Tech Stack: Python, TensorFlow, OpenCV, Streamlit
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <h3>AI-Based Flood Alert System</h3>
+
+          <p>
+            Created a machine learning-based flood prediction system using rainfall,
+            weather trends, and seasonal data. Added emergency alert features,showing nearest relief centers and
+            safety recommendations for users.
+          </p>
+
+          <div class="tech">
+            Tech Stack: Python, Scikit-Learn, Pandas
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="achievements">
+
+    <h2 class="section-title">Workshops and Hackathons</h2>
+
+    <div class="timeline">
+
+      <div class="container left">
+        <div class="content">
+          <h3>Generative AI Hackathon</h3>
+          <p>
+            Participated in a 24-hour AI Hackathon and developed an innovative
+            AI-based solution with a collaborative team. Our team was recognized
+            among the Top 6 teams and received a Consolation Prize for the project
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>Zomathon - The Data Hackathon</h3>
+          <p>
+            Analyzing large-scale datasets and
+            developing data-driven solutions to
+            real-world problems through collaborative
+            teamwork and critical thinking.
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>Chatbot Development Workshop</h3>
+          <p>
+            Explored AI, Python, Google AI Studio, and chatbot development.
+            Ranked among Top 5 performers in the workshop quiz.
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>Leadership Experience</h3>
+          <p>
+            Led a 3-day AI Chatbot Hackathon team, coordinating development tasks
+            and ensuring successful project completion.
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>Certificate of Excellence-Teenzclap</h3>
+          <p>
+            Recognized for leadership skills, creative
+thinking, and active participation in
+professional development programs.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container right">
+        <div class="content">
+          <h3>Swetcha Summer AI Internship</h3>
+          <p>
+            Learned about AI/ML workflow and
+contributed Telugu voice samples for LLM
+development
+          </p>
+        </div>
+      </div>
+
+  </section>
+
 
 <section id="certifications">
-    <h3 class="section-title">Certifications & Participation</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>CISCO Networking Academy</h4>
-            <p>Completed Networking Basics covering IP addressing, routing, and troubleshooting.</p>
-        </div>
-        <div class="card">
-            <h4>IBM SkillsBuild – Cloud Computing</h4>
-            <p>Certified in cloud fundamentals including service models and infrastructure concepts.</p>
-        </div>
-        <div class="card">
-            <h4>Swetcha Summer AI Internship</h4>
-            <p>Worked on AI and LLM concepts; contributed Telugu voice samples for LLM training.</p>
-        </div>
-        <div class="card">
-            <h4>Springboard - Infosys AI Insights</h4>
-            <p>Gained insights about Artificial Intelligence, its types, and practical applications.</p>
-        </div>
-        <div class="card">
-            <h4>Great Learning - DBMS Concepts</h4>
-            <p>Explored DBMS concepts, gaining a strong understanding of data models, SQL, and database design principles.</p>
-        </div>
-        <div class="card">
-            <h4>Teenzclap Professional Development</h4>
-            <p>Certified with Excellence in teamwork, communication, and professional skills.</p>
-        </div>
+
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-box">
+      <h3>Cisco Networking Academy</h3>
+      <p>Networking Basics Certification</p>
     </div>
+
+    <div class="skill-box">
+      <h3>IBM SkillsBuild</h3>
+      <p>Cloud Computing Certification</p>
+    </div>
+
+    <div class="skill-box">
+      <h3>Infosys Springboard</h3>
+      <p>AI Insights Certification</p>
+    </div>
+
+    <div class="skill-box">
+      <h3>Great Learning</h3>
+      <p>DBMS Concepts Certification</p>
+    </div>
+
+  </div>
+
 </section>
 
-<section id="skills">
-    <h3 class="section-title">Skills</h3>
-    <div class="skills">
-        <span>Python</span><span>Java</span><span>C</span>
-        <span>Data Structures & Algorithms</span>
-        <span>Machine Learning</span>
-        <span>DBMS</span><span>SQL</span>
-        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-        <span>React</span>
-    </div>
-</section>
 
-<section id="leadership">
-    <h3 class="section-title">Leadership & Volunteering</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Team Lead - Chatbot Development Hackathon</h4>
-            <p>
-                Led a team in a 3-day hackathon to develop an AI chatbot using Google AI Studio and Claude AI.
-                Coordinated tasks, managed timelines, and presented the final product to judges.
-            </p>
-            <div class="meta">Leadership · Team Management · AI Integration</div>
-        </div>
-        <div class="card">
-            <h4>Coordinator - Artista Club, GNITS</h4>
-            <p>
-                Organized workshops, events, and exhibitions for the college art club.
-                Facilitated collaboration among students, promoting creative expression and leadership skills.
-            </p>
-            <div class="meta">Event Management · Leadership · Creativity</div>
-        </div>
-        <div class="card">
-            <h4>Teenzclap Professional Development</h4>
-            <p>Certified with Excellence in teamwork, communication, and professional skills.</p>
-            <div class="meta">Soft Skills · Leadership · Teamwork</div>
-        </div>
-    </div>
-</section>
+  <section class="contact" id="contact">
 
-<section id="links">
-    <h3 class="section-title">Coding Profiles</h3>
-    <div class="links">
-        <a href="https://leetcode.com/u/JettiManuSri/" target="_blank">LeetCode</a>
-        <a href="https://www.codechef.com/users/manu_2006" target="_blank">CodeChef</a>
-        <a href="https://www.hackerrank.com/profile/manusrijetti30" target="_blank">HackerRank</a>
-        <a href="https://www.linkedin.com/in/manu-sri-jetti-033686293/" target="_blank">LinkedIn</a>
-    </div>
-</section>
+    <h2 class="section-title" style="color:white;">Contact Me</h2>
 
-<section id="contact">
-    <h3 class="section-title">Contact</h3>
-    <p>Email: <a href="mailto:manusrijetti30@gmail.com">manusrijetti30@gmail.com</a></p>
-</section>
+    <p> manusrijetti30@gmail.com</p>
+
+    <p>
+       LinkedIn:
+      <a href="https://www.linkedin.com/in/manu-sri-jetti-033686293" target="_blank">
+        Visit Profile
+      </a>
+    </p>
+
+    <p> Hyderabad, India</p>
+
+  </section>
+
+
+
+  
 
 </body>
 </html>
