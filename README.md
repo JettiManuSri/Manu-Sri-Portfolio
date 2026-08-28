@@ -1,49 +1,135 @@
-# Manu Sri Jetti |Portfolio
+# Manu Sri Jetti | Portfolio
 
-This repository contains my personal portfolio website, built to present my academic background, technical skills, real-world projects, certifications, and leadership experience as a **3rd-year B.Tech Computer Science Engineering student at GNITS, Hyderabad**.
+Welcome to my personal portfolio repository. I am a Computer Science undergraduate at **G. Narayanamma Institute of Technology and Science (GNITS), Hyderabad**, interested in software development, AI-enabled applications, data structures, and solving practical engineering problems.
+
+My work spans **full-stack development, REST APIs, machine learning, Generative AI, computer vision, recommendation systems, and open-source development**.
 
 ## Profile Summary
-Passionate Computer Science undergraduate interested in Machine Learning, Full Stack Development, Problem Solving, and Open Source
-Contributions with hands-on project experience in AI-powered applications and scalable software solutions.
 
+Computer Science undergraduate with a strong foundation in **Java, Python, Data Structures & Algorithms, Object-Oriented Programming, DBMS, and SQL**. I enjoy building practical software systems that combine engineering with AI, from full-stack applications and REST APIs to machine-learning and multimodal AI solutions.
+
+I have gained hands-on experience through academic projects, hackathons, Generative AI programs, and open-source contributions.
 
 ## Projects
 
-- **AI-Based Flood Alert System**  
-  Built a machine learning-based system to predict flood risk using rainfall, water levels, and seasonal data. Developed a web platform for predictions, trend visualization, and safety recommendations, along with SOS alert and nearest relief center features.
+### AI-Based Flood Alert System
 
-- **Satellite Image Processing for Water Body Detection**  
-  Developed a U-Net based semantic segmentation model for detecting water bodies from satellite images. Built an end-to-end preprocessing pipeline with image tiling (256×256), masking, and a Streamlit web app for visualization and prediction.
-   
+A full-stack flood-risk monitoring platform designed to combine machine-learning predictions with real-time information and emergency-response features.
+
+- Built the application using **React, JavaScript, and Flask**.
+- Designed **REST APIs** to connect prediction services with an interactive dashboard.
+- Integrated a machine-learning prediction module for flood-risk analysis.
+- Implemented **Admin and Citizen portals** with role-based access and emergency workflows.
+- Added mapping functionality to help users locate nearby relief centers.
+- Designed the system to present flood alerts, trends, and emergency information through a unified interface.
+
+**Technologies:** React, JavaScript, Flask, REST APIs, Machine Learning
+
+### Satellite Image Pre-Processing Tool
+
+An automated image-processing workflow developed to reduce manual effort in preparing satellite-image datasets.
+
+- Developed reusable **Python components** for image tiling, masking, and segmentation.
+- Automated preprocessing operations to make dataset preparation more consistent and repeatable.
+- Built a **Streamlit application** for image visualization and automated dataset generation.
+- Used **OpenCV** for image-processing operations.
+- Structured the preprocessing workflow into modular components that can be reused across datasets.
+
+**Technologies:** Python, OpenCV, Streamlit, Image Processing
+
+## Hackathons & AI Projects
+
+### Top 6 — Generative AI Hackathon
+
+Secured a **Top 6 position among 80+ teams** and won the **Consolation Prize** by developing an AI-powered sales and marketing solution.
+
+- Designed a platform for automated campaign generation and personalized sales pitches.
+- Generated customer-profile-based marketing content using Generative AI models.
+- Designed structured prompts and output templates to produce consistent campaign content.
+- Implemented predictive analytics for **lead scoring and potential-customer identification**.
+- Focused on applying Generative AI to practical sales and marketing workflows.
+
+### Zomathon — The Data Hackathon
+
+Developed a **Smart Cart Food Recommendation System** using large-scale food and ordering datasets.
+
+- Analyzed user order history and preferences to understand customer behaviour.
+- Designed a recommendation approach to provide personalized food suggestions.
+- Worked with data-driven techniques to convert user behaviour into recommendation decisions.
+- Collaborated as part of a team to develop and present the solution.
+
+### Fashion Product Intelligence System — Gen-AI Camp
+
+Developed a multimodal product-understanding and semantic-retrieval system during the **Gen-AI Camp by AlgoUniversity**.
+
+- Used **CLIP embeddings** to represent products using both visual and semantic information.
+- Implemented **FAISS vector search** for semantic product retrieval.
+- Developed a hybrid recommendation approach combining vector similarity, metadata filtering, and rule-based ranking.
+- Explored multimodal AI techniques for improving product discovery and recommendations.
+
+**Technologies:** CLIP, FAISS, Embeddings, Multimodal AI
+
 ## Open Source Contributions
 
-- Improved bulk insert performance in **Zerith-Labs/ZerithDB** using IndexedDB transaction optimization.
-- Enhanced schema compatibility and increased test coverage in **Arnio** repository.
+### GirlScript Summer of Code 2026
 
-## Workshops & Hackathons
+Contributed to open-source repositories with a focus on performance, compatibility, and testing.
 
-- **Generative AI Hackathon**  
-  Competed in a 24-hour Generative AI Hackathon and earned a Consolation Prize for developing an innovative AI-based solution.
+- **Zerith-Labs/ZerithDB:** Improved bulk-insert performance through IndexedDB transaction optimization.
+- **Arnio:** Enhanced schema compatibility and strengthened test coverage.
 
-- **Zomathon – The Data Hackathon**  
-  Analyzed large-scale datasets and developed data-driven solutions through collaborative teamwork and critical thinking.
+## Technical Skills
 
-- **Chatbot Development Hackathon**  
-  Led a team during a 3-day AI chatbot development hackathon, ensuring successful project completion.
-  
-## Certifications & Leadership
-- Cisco Networking Academy  
-- IBM SkillsBuild  
-- Infosys Springboard  
-- Great Learning  
-- **Team Lead** - Chatbot Development Hackathon  
-- **Coordinator** - Artista Club, GNITS
-- **Value Added Course and Professional Development– Teenzclap**: Awarded *Certificate of Excellence* for demonstrating strong **leadership, teamwork, communication, and professional skills**.
- 
+### Languages
+Java, Python, C
 
-## Tech Stack
-Java , Python , C , DSA , ML , DBMS , SQL , HTML , CSS , JavaScript , React  
+### Web Technologies
+HTML, CSS, JavaScript, React, REST APIs
+
+### Computer Science
+Data Structures & Algorithms, Object-Oriented Programming, DBMS, SQL, Operating Systems, Computer Networks
+
+### AI & Machine Learning
+Machine Learning, Generative AI, LLMs, NLP, Computer Vision, Embeddings, Multimodal AI
+
+### Development Tools
+Git, GitHub, Flask, Streamlit, OpenCV
+
+## Education
+
+**G. Narayanamma Institute of Technology and Science, Hyderabad**  
+B.Tech in Computer Science and Engineering | 2023 – 2027  
+**CGPA: 9.05**
+
+**Alphores Junior College, Hanamkonda**  
+Intermediate — MPC | 2021 – 2023  
+**Percentage: 98.5%**
+
+**Aryabhatta High School, Hanamkonda**  
+SSC | 2020 – 2021  
+**GPA: 10**
+
+## Leadership
+
+### Coordinator — Artista Club, GNITS
+
+Organized and coordinated creative events and student activities while working with student teams and managing event responsibilities.
+
+## Coding Profiles
+
+- [LeetCode](https://leetcode.com/u/JettiManuSri/)
+- [CodeChef](https://www.codechef.com/users/manu_2006)
+- [HackerRank](https://www.hackerrank.com/profile/manusrijetti30)
+- [MentorPick](https://mentorpick.com/login?next=/profile/23251a05p6-manu)
 
 ## Contact
- **Email:** manusrijetti30@gmail.com  
- **LinkedIn:** https://linkedin.com/in/manu-sri-jetti-033686293
+
+**Email:** manusrijetti30@gmail.com  
+**LinkedIn:** [linkedin.com/in/manu-sri-jetti-033686293](https://linkedin.com/in/manu-sri-jetti-033686293)  
+**GitHub:** [github.com/JettiManuSri](https://github.com/JettiManuSri)
+
+---
+
+### Portfolio
+
+🌐 **[Visit my Portfolio](https://jettimanusri.github.io/Manu-Sri-Portfolio/)**
